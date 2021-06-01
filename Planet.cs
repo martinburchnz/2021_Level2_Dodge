@@ -34,6 +34,12 @@ namespace _2021_Level2_Dodge
             planetRec = new Rectangle(x, y, width, height);
             g.DrawImage(planetImage, planetRec);
         }
+        public void MovePlanet()
+        {
+            y += 10;
+
+            planetRec.Location = new Point(x, y);
+        }
 
     }
 }

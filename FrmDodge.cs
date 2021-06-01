@@ -42,5 +42,20 @@ namespace _2021_Level2_Dodge
 
 
         }
+
+        private void TmrPlanet_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                planet[i].MovePlanet();
+                //if a planet reaches the bottom of the Game Area reposition it at the top
+                if (planet[i].y >= PnlGame.Height)
+                {
+                    planet[i].y = 30;
+                }
+
+            }
+            PnlGame.Invalidate();//makes the paint event fire to redraw the panel
+        }
     }
 }
