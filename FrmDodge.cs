@@ -16,7 +16,7 @@ namespace _2021_Level2_Dodge
         // declare space for an array of 7 objects called planet 
         Planet[] planet = new Planet[7];
         Random yspeed = new Random();
-
+        Spaceship spaceship = new Spaceship();
         public FrmDodge()
         {
             InitializeComponent();
@@ -28,6 +28,8 @@ namespace _2021_Level2_Dodge
 
 
         }
+        //methods
+      
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
@@ -43,7 +45,7 @@ namespace _2021_Level2_Dodge
                 //call the Planet class's drawPlanet method to draw the images
                 planet[i].DrawPlanet(g);
             }
-
+            spaceship.DrawSpaceship(g);
 
         }
 
