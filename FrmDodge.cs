@@ -87,6 +87,23 @@ namespace _2021_Level2_Dodge
             lives = int.Parse(LblLives.Text);
         }
 
+        private void MnuStart_Click(object sender, EventArgs e)
+        {
+            score = 0;
+            LblScore.Text = score.ToString();
+            lives = int.Parse(LblLives.Text);// pass lives entered from textbox to lives variable
+            TmrPlanet.Enabled = true;
+            TmrShip.Enabled = true;
+
+        }
+
+        private void MnuStop_Click(object sender, EventArgs e)
+        {
+            TmrShip.Enabled = false;
+            TmrPlanet.Enabled = false;
+
+        }
+
         private void TmrPlanet_Tick(object sender, EventArgs e)
         {
             for (int i = 0; i < 7; i++)

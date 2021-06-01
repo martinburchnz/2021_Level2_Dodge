@@ -40,6 +40,10 @@ namespace _2021_Level2_Dodge
             this.label5 = new System.Windows.Forms.Label();
             this.LblLives = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlGame
@@ -53,12 +57,10 @@ namespace _2021_Level2_Dodge
             // 
             // TmrPlanet
             // 
-            this.TmrPlanet.Enabled = true;
             this.TmrPlanet.Tick += new System.EventHandler(this.TmrPlanet_Tick);
             // 
             // TmrShip
             // 
-            this.TmrShip.Enabled = true;
             this.TmrShip.Interval = 50;
             this.TmrShip.Tick += new System.EventHandler(this.TmrShip_Tick);
             // 
@@ -129,6 +131,31 @@ namespace _2021_Level2_Dodge
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 1;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuStart,
+            this.MnuStop});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MnuStart
+            // 
+            this.MnuStart.Name = "MnuStart";
+            this.MnuStart.Size = new System.Drawing.Size(43, 20);
+            this.MnuStart.Text = "Start";
+            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
+            // 
+            // MnuStop
+            // 
+            this.MnuStop.Name = "MnuStop";
+            this.MnuStop.Size = new System.Drawing.Size(43, 20);
+            this.MnuStop.Text = "Stop";
+            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
+            // 
             // FrmDodge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,12 +169,16 @@ namespace _2021_Level2_Dodge
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PnlGame);
+            this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmDodge";
             this.Text = "Dodge";
             this.Load += new System.EventHandler(this.FrmDodge_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyUp);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +196,9 @@ namespace _2021_Level2_Dodge
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label LblLives;
         private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MnuStart;
+        private System.Windows.Forms.ToolStripMenuItem MnuStop;
     }
 }
 
