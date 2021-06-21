@@ -23,6 +23,7 @@ namespace _2021_Level2_Dodge
         public FrmDodge()
         {
             InitializeComponent();
+            //position the planets across the game panel
             for (int i = 0; i < 7; i++)
             {
                 int x = 10 + (i * 75);
